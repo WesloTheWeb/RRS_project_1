@@ -1,0 +1,25 @@
+.title, .cta {
+    text-transform: uppercase;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+    color: #4a4a4a;
+}
+
+.menuItem {
+    background-color: #fff;
+    text-align: center;
+    min-width: 30%;
+    height: 10rem;
+    margin: 1rem;
+    border: 5.5px solid #4a4a4a;
+    border-radius: 10px;
+}
+
+.subtitle {
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
