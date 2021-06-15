@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Splatfont2";
+  src: local("Splatfont2"),
+    url("./assets/fonts/Splatfont2.ttf") format("truetype");
+  font-weight: normal;
+}

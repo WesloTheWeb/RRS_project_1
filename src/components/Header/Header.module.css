@@ -1,9 +1,47 @@
+@import '../../App.css';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoContainer {
+    display: flex;
+    position: relative;
+    padding: 1.5rem;
+}
+
 .logoContainer img {
-margin-bottom: 4.5rem;
-    width: 10%;
+    position: absolute;
+    width: 50%;
+    left: 10rem;
 }
 
 .mascotImg {
-    width: 5%;
+    width: 15%;
     position: absolute;
+}
+
+/*Navigation*/
+.navigation {
+    display: flex;
+}
+
+.navigation li {
+    font-family: "Splatfont2";
+    font-size: 1.5rem;
+    color: #fff;
+    list-style: none;
+    margin: 0 .5rem;
+}
+
+.navigation li:hover {
+    cursor: pointer;
+    color: var(--green);
+}
+
+.storeFront {
+    font-family: "Splatfont2";
+    font-size: 1.5rem;
+    color: var(--pink);
 }

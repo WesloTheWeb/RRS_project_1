@@ -2,16 +2,24 @@ import React from 'react';
 import { splatoons2, mascot } from '../../assets';
 import classes from './Header.module.css';
 
-const { header, logoContainer, mascotImg } = classes;
+const { header, logoContainer, mascotImg, navigation, storeFront } = classes;
 
 const Header = (props) => {
     return (
+        <>
         <header className={header}>
             <section className={logoContainer}>
-                <img src={splatoons2} alt="splatoons 2 logo" />
+                <h1 className={storeFront}>Shella Fresh</h1>
                 <img src={mascot} className={mascotImg} alt="squid with swag" />
             </section>
+            <nav>
+                <ul className={navigation}>
+                    <li>Shop</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
         </header>
+        </>
     );
 };
 
