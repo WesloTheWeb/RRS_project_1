@@ -6,3 +6,24 @@ body {
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
+
+/*IMAGES CLASSES */
+.hatsCover {
+  background-image: url('./assets/images/hats.png');
+}
+
+.jacketsCover {
+  background-image: url('./assets/images/jackets.png');
+}
+
+.sneakersCover {
+  background-image: url('./assets/images/sneakers.png');
+}
+
+.womensCover {
+  background-image: url('./assets/images/womens.png');
+}
+
+.mensCover {
+  background-image: url('./assets/images/men.png');
+}

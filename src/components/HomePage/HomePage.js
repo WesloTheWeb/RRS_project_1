@@ -10,31 +10,31 @@ const HomePage = (props) => {
     const inventory = [
         {
             title: "Hats",
-            imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+            imageClass: 'hatsCover',
             id: 0,
             cta: "Shop Now",
         },
         {
             title: "Jackets",
-            imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+            imageClass: 'jacketsCover',
             id: 1,
             cta: "Shop Now",
         },
         {
             title: "Sneakers",
-            imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+            imageClass: 'sneakersCover',
             id: 2,
             cta: "Shop Now",
         },
         {
             title: "Womens",
-            imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+            imageClass: 'womensCover',
             id: 3,
             cta: "Shop Now",
         },
         {
             title: "Mens",
-            imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+            imageClass: 'mensCover',
             id: 4,
             cta: "Shop Now",
         },
@@ -43,8 +43,8 @@ const HomePage = (props) => {
         <>
             <section className={homepage}>
                 <div className={directoryMenu}>
-                    {inventory.map(({ title, id, cta, imageUrl, size }) => {
-                        return <MenuItem title={title} key={id} cta={cta} imageUrl={imageUrl} />
+                    {inventory.map(({ title, id, cta, imageUrl, imageClass }) => {
+                        return <MenuItem title={title} key={id} cta={cta} imageUrl={imageUrl} imageClass={imageClass} />
                     })}
                 </div>
             </section>
