@@ -1,5 +1,5 @@
 import React from 'react';
-import { splatoons2, mascot } from '../../assets';
+import { mascot } from '../../assets';
 import classes from './Header.module.css';
 
 const { header, logoContainer, mascotImg, navigation, storeFront } = classes;
