@@ -1,6 +1,6 @@
 import React from 'react';
 import { mascot } from '../../assets';
-import classes from './Header.module.css';
+import classes from './Header.module.scss';
 
 const { header, logoContainer, mascotImg, navigation, storeFront } = classes;
 

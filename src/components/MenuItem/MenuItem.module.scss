@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .title, .cta {
     text-transform: uppercase;
 }
@@ -10,7 +12,8 @@
 }
 
 .menuItem {
-    background-color: #fff;
+    background-position: center;
+    background-size: cover;
     text-align: center;
     min-width: 30%;
     height: 10rem;

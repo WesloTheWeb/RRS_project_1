@@ -1,4 +1,4 @@
-@import '../../App.css';
+@import '../../variables.scss';
 
 .header {
     display: flex;
@@ -37,11 +37,11 @@
 
 .navigation li:hover {
     cursor: pointer;
-    color: var(--green);
+    color: $green;
 }
 
 .storeFront {
     font-family: "Splatfont2";
     font-size: 1.5rem;
-    color: var(--pink);
+    color: $pink;
 }

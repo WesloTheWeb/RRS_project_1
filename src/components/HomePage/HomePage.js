@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuItem from '../MenuItem/MenuItem';
 // import Header from '../Header/Header';
-import classes from './HomePage.module.css';
+import classes from './HomePage.module.scss';
 
 const { homepage, directoryMenu } = classes;
 
@@ -41,13 +41,12 @@ const HomePage = (props) => {
             size: 'large',
         },
     ]
-
     return (
         <>
             <section className={homepage}>
                 <div className={directoryMenu}>
-                    {inventory.map((item, id) => {
-                        return <MenuItem title={item.title} key={item.id} cta={item.cta} size={item.size} />
+                    {inventory.map(({ title, id, cta, imageUrl, size }) => {
+                        return <MenuItem title={title} key={id} cta={cta} imageUrl={imageUrl} size={size} />
                     })}
                 </div>
             </section>
