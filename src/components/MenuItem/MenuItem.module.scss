@@ -6,6 +6,7 @@
 
 .titleContainer {
     position: absolute;
+    bottom: 0;
     background-color: $white;
     opacity: 0.7;
     width: 20%;
@@ -35,6 +36,7 @@
 
     &:hover {
         cursor: pointer;
+        border: 1.5px solid $limegreen;
 
         &.backgroundImage {
             transform: scale(1.1);

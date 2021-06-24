@@ -20,3 +20,10 @@ code {
     url("./assets/fonts/Splatfont2.ttf") format("truetype");
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'NotoSans-Regular';
+  src: local('NotoSans-Regular'), url("./assets/fonts/NotoSans-Regular.ttf") format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
