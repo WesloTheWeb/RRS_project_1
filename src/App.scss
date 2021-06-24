@@ -11,6 +11,7 @@ body {
 /*IMAGES CLASSES */
 .hatsCover {
   background-image: url('./assets/images/hats.png');
+ 
 }
 
 .jacketsCover {
@@ -23,8 +24,11 @@ body {
 
 .womensCover {
   background-image: url('./assets/images/womens.png');
+  height: 450*$px !important;
+
 }
 
 .mensCover {
   background-image: url('./assets/images/men.png');
+  height: 450*$px !important;
 }

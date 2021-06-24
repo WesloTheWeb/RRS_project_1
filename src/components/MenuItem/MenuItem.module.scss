@@ -1,5 +1,5 @@
 @import '../../variables.scss';
-
+//TODO: Organize hierarchy order and rename some classes to be more semantic.
 .title, .cta {
     text-transform: uppercase;
 }
@@ -20,10 +20,10 @@
     margin-bottom: .5rem;
     font-size: 1.8rem;
     color: $black;
-    // color: #4a4a4a;
 }
 
 .menuItem {
+    overflow: hidden;
     position: relative;
     background-position: center;
     background-size: cover;
@@ -37,16 +37,20 @@
     &:hover {
         cursor: pointer;
         border: 1.5px solid $limegreen;
-
-        &.backgroundImage {
-            transform: scale(1.1);
-            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-        }
-
-        &.content {
-            opacity: 0.9;
-        }
     }
+}
+
+.backgroundImage {
+    background-position: center;
+    background-size: cover;
+    min-width: 30%;
+    height: 300*$px;
+    border-radius: 10px;
+}
+
+.backgroundImage:hover {
+    transform: scale(1.1);
+    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 }
 
 .menuItem:nth-child(1n + 4) {

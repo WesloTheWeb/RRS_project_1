@@ -6,12 +6,16 @@ const { menuItem, titleContainer, title, subtitle, backgroundImage } = classes;
 
 const MenuItem = (props) => {
     return (
-        <div className={`${menuItem} ${props.imageClass} ${backgroundImage}`}>
-            <div className={titleContainer}>
-                <h1 className={title}>{props.title}</h1>
-                <span className={subtitle}>{props.cta}</span>
+        <>
+        <div className={menuItem}>
+            <div className={`${props.imageClass} ${backgroundImage}`}>
+                <div className={titleContainer}>
+                    <h1 className={title}>{props.title}</h1>
+                    <span className={subtitle}>{props.cta}</span>
+                </div>
             </div>
         </div>
+        </>
     );
 };
 
