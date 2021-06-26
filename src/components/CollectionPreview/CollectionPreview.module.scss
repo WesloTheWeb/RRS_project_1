@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+.collectionPreview {
+    padding: 1.5rem;
+    border: 1px solid $white;
+}
+
+.preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.title, .preview {
+    color: $white;
+    font-weight: bold;
+}
+
+.clothing:hover {
+    color: $orange;
+    cursor: pointer;
+}

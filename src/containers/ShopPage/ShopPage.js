@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import CollectionPreview from '../../components/CollectionPreview/CollectionPreview';
 
 const ShopPage = (props) => {
-
     const [collection, setCollection] = useState([
         {
             id: 1,
@@ -286,11 +286,14 @@ const ShopPage = (props) => {
     ])
 
     return (
-        <div>
-            <h2>Shop Page</h2>
-        </div>
+        <>
+            {collection.map((item) => {
+                return (
+                    <CollectionPreview key={item.id} item={item} />
+                )
+            })}
+        </>
     );
 };
-
 
 export default ShopPage;
