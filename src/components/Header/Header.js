@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { mascot } from '../../assets';
+import Swag from '../../containers/Swag/Swag';
 import classes from './Header.module.scss';
 
-const { header, logoContainer, mascotImg, navigation, storeFront } = classes;
+const { header, logoContainer, navigation, storeFront } = classes;
 
 const Header = (props) => {
     return (
@@ -12,7 +12,7 @@ const Header = (props) => {
             <section className={logoContainer}>
                 <h1 className={storeFront}>
                     <Link to="/">Shella Fresh</Link></h1>
-                <img src={mascot} className={mascotImg} alt="squid with swag" />
+                <Swag />
             </section>
             <nav>
                 <ul className={navigation}>

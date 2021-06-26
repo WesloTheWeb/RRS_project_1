@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CollectionPreview from '../../components/CollectionPreview/CollectionPreview';
 
 const ShopPage = (props) => {
-    const [collection, setCollection] = useState([
+    const [collection] = useState([
         {
             id: 1,
             title: 'Hats',
