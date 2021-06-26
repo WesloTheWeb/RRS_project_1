@@ -10,14 +10,16 @@ const CollectionPreview = ({ item }) => {
             <div className="divider">
                 <div className={preview}>
                     {
-                        item.items.map((item) => {
-                            return (
-                                <div className={clothing} key={item.id}>
-                                    <img src={item.imageUrl} alt="item" />
-                                    {item.name}
-                                </div>
-                            )
-                        })}
+                        item.items.filter((item, index) => index < 4)
+                            .map((item) => {
+                                return (
+                                    <div className={clothing} key={item.id}>
+                                        <img src={item.imageUrl} alt="item" />
+                                        {item.name}
+                                    </div>
+                                )
+                            })
+                    }
                 </div>
             </div>
         </section>
