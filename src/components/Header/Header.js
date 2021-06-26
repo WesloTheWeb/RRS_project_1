@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { mascot } from '../../assets';
 import classes from './Header.module.scss';
 
@@ -9,12 +10,13 @@ const Header = (props) => {
         <>
         <header className={header}>
             <section className={logoContainer}>
-                <h1 className={storeFront}>Shella Fresh</h1>
+                <h1 className={storeFront}>
+                    <Link to="/">Shella Fresh</Link></h1>
                 <img src={mascot} className={mascotImg} alt="squid with swag" />
             </section>
             <nav>
                 <ul className={navigation}>
-                    <li>Shop</li>
+                    <li><Link to="/shop">Shop</Link></li>
                     <li>Contact</li>
                 </ul>
             </nav>
