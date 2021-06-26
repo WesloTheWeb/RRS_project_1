@@ -15,7 +15,10 @@ const CollectionPreview = ({ item }) => {
                                 return (
                                     <div className={clothing} key={item.id}>
                                         <img src={item.imageUrl} alt="item" />
-                                        {item.name}
+                                        <div className="item-price-container">
+                                            <label>{item.name}</label>
+                                            <span>${item.price}</span>
+                                        </div>
                                     </div>
                                 )
                             })

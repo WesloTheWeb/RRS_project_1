@@ -1,17 +1,20 @@
 @import '../../variables.scss';
 
 .collectionPreview {
+    background-color: $white;;
     padding: 1.5rem;
-    border: 1px solid $white;
+    margin: 1.5rem;
 }
 
 .preview {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3.5rem;
 }
 
 .title, .preview {
-    color: $white;
+    color: $black;
+    width: 50%;
     font-weight: bold;
 }
 

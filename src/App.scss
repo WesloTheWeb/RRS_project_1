@@ -37,3 +37,8 @@ a, a:visited {
   background-image: url('./assets/images/men.png');
   height: 450*$px !important;
 }
+
+.item-price-container {
+  display: flex;
+  justify-content: space-between;
+}
