@@ -1,0 +1,15 @@
+
+@import '../../variables.scss';
+
+.collectionItem {
+    color: $black;
+}
+
+.collectionItem:hover {
+    color: $orange;
+    cursor: pointer;
+}
+
+.collectionItem img:hover {
+    opacity: .75;
+}

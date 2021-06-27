@@ -9,15 +9,23 @@ const Swag = (props) => {
     const [swag, setSwag] = useState("");
 
     const quotes = [
-        `Welcome to Shella Fresh!`,
-        `DAAANG, DUDE!, You're looking flyer than an Inkjet! Fresher than a mint farm! Check out these new sneaks I got! `
+        {
+            id: 0,
+            quote: `Welcome to Shella Fresh!`
+        },
+        {
+            id: 1,
+            quote: `DAAANG, DUDE!, You're looking flyer than an Inkjet! Fresher than a mint farm! Check out these new sneaks I got! `
+        }
     ]
 
     const handleQuote = () => {
         setSwag(
-            quotes.map((quote) => {
+            quotes.map((text) => {
                 return (
-                    quote
+                    <p key={text.id}>
+                        {text.quote}
+                    </p>
                 )
             })
         );

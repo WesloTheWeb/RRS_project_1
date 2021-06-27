@@ -1,7 +1,8 @@
 import React from 'react';
+import CollectionItem from '../CollectionItem/CollectionItem';
 import classes from './CollectionPreview.module.scss';
 
-const { collectionPreviewSet, title, preview, clothing } = classes;
+const { collectionPreviewSet, title, preview } = classes;
 
 const CollectionPreview = ({ item }) => {
     return (
@@ -12,13 +13,12 @@ const CollectionPreview = ({ item }) => {
                     item.items.filter((item, index) => index < 4)
                         .map((item) => {
                             return (
-                                <div className={clothing} key={item.id}>
-                                    <img src={item.imageUrl} alt="item" />
-                                    <div className="item-price-container">
-                                        <label>{item.name}</label>
-                                        <span>${item.price}</span>
-                                    </div>
-                                </div>
+                                <CollectionItem key={item.id}
+                                    item={item}
+                                    name={item.name}
+                                    price={item.price}
+                                    imageUrl={item.imageUrl}
+                                />
                             )
                         })
                 }
