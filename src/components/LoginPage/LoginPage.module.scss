@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.loginLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+}
+
+.terminalUIBlock {
+    background-color: $white;
+    padding: 5.5rem;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.loginCommon input {
+    display: block;
+}
+
+.loginCommon label {
+    display: block;
+    margin-top: 1.5rem;
+}

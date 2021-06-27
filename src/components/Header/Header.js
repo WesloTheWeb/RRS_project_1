@@ -16,8 +16,9 @@ const Header = (props) => {
             </section>
             <nav>
                 <ul className={navigation}>
+                    <li><Link to="/">Home</Link></li>
                     <li><Link to="/shop">Shop</Link></li>
-                    <li>Contact</li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
             </nav>
         </header>

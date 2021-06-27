@@ -13,7 +13,7 @@ const ShopPage = (props) => {
                     name: 'Brown Brim',
                     // imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
                     imageUrl: "/images/shop-img/hats/brown-brim.png",
-                    price: 25
+                    price: 25.50
                 },
                 {
                     id: 2,
