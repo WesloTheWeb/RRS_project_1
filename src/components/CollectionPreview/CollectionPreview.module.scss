@@ -17,3 +17,14 @@
     width: 50%;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 769px) {
+    .preview {
+        display: block;
+    }
+
+    .collectionPreviewSet {
+        padding: 0;
+        margin: 0;
+    }
+}
