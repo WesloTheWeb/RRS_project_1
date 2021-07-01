@@ -26,3 +26,9 @@
         font-weight: bold;
     }
 }
+
+@media only screen and (max-width: 769px) {
+    .loginLayout {
+        display: block;
+    }
+}

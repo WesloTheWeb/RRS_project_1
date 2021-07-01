@@ -42,3 +42,8 @@ a, a:visited {
   display: flex;
   justify-content: space-between;
 }
+
+.activeNavLink {
+  color: $green !important;
+  border-bottom: 5px solid $turquoise;
+}

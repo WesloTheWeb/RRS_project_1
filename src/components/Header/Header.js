@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Swag from '../../containers/Swag/Swag';
 import classes from './Header.module.scss';
 
@@ -16,9 +16,9 @@ const Header = (props) => {
             </section>
             <nav>
                 <ul className={navigation}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
-                    <li><Link to="/login">Login</Link></li>
+                    <li><NavLink exact to="/" activeClassName="activeNavLink">Home</NavLink></li>
+                    <li><NavLink exact to="/shop" activeClassName="activeNavLink">Shop</NavLink></li>
+                    <li><NavLink exact to="/login" activeClassName="activeNavLink">Login</NavLink></li>
                 </ul>
             </nav>
         </header>
