@@ -24,3 +24,9 @@
     width: 15%;
     position: absolute;
 }
+
+@media only screen and (max-width: 769px) {
+    .bubbleBox, .bubbleTriangle, .mascotImg {
+        display: none;
+    }
+}
