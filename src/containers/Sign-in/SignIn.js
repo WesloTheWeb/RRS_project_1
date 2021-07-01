@@ -26,8 +26,8 @@ const SignIn = (props) => {
 
     return (
         <div className={terminalUIBlock}>
-            <h2>I already have an account</h2>
-            <span>Sign in with your email and password</span>
+            <h2>I already have an account.</h2>
+            <span>Sign in with your email and password.</span>
             <form onSubmit={handleSubmit} className={loginCommon}>
                 <label htmlFor="email">Email</label>
                 <input name="email" id="email" value={form.email} type="email" onChange={handleChange} required />
@@ -38,5 +38,7 @@ const SignIn = (props) => {
         </div>
     );
 };
+
+// TO-DO: Add in RSS Feed of Twitter that searches for #ShellaFresh
         
 export default SignIn;
