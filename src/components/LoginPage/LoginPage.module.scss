@@ -13,11 +13,16 @@
     border-radius: 10px;
 }
 
-.loginCommon input {
-    display: block;
-}
+// Sign in properties
+.loginCommon {
+    input {
+        display: block;
+    }
 
-.loginCommon label {
-    display: block;
-    margin-top: 1.5rem;
+    label {
+        display: block;
+        margin-top: 1.5rem;
+        margin-bottom: .25rem;
+        font-weight: bold;
+    }
 }

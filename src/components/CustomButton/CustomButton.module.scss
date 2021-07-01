@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.customButton {
+    margin: 1.5rem auto;
+    min-width: 165*$px;
+    height: 50*$px;
+    padding: 0 35px 0 35px;
+    background-color: $CustomButtonBackgroundColor;
+    color: $CustomButtonFontColor;
+    letter-spacing: 1.5*$px;
+    text-transform: uppercase;
+    font-family: 'Sans Serif';
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5*$px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $CustomButtonBackgroundHoverColor;
+      color: $CustomButtonFontHoverColor;
+      border: 1px solid black;
+    }
+  }
+  
