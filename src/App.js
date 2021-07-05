@@ -10,24 +10,21 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const [unsubscribe, setUnsubscribe] = useState(null);
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      setCurrentUser(currentUser = user);
+      setCurrentUser(user);
       console.log(user);
     });
  
-    setUnsubscribe(unsubscribeFromAuth);
-    
     return () => {
-      unsubscribe();
+      unsubscribeFromAuth();
     }
-  }, [])
+  }, []);
 
   return (
     <>
-      <Header />
+      <Header currentUser={currentUser} />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/shop' component={ShopPage} />
