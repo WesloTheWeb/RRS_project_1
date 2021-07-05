@@ -7,10 +7,9 @@ const { customButton } = classes;
 const CustomButton = ({children, ...otherProps}) => {
     return (
         <button className={customButton} {...otherProps}>
-            {children}
+            {children} 
         </button>
     );
 };
-
 
 export default CustomButton;
