@@ -13,6 +13,32 @@ const FIREBASE_CONFIG = {
     measurementId: "G-Q6N9LY56TN"
 };
 
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+    if (!userAuth) 
+    return;
+
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+    const snapShot = await userRef.get();
+    console.log(snapShot);
+
+    if (!snapShot.exists) {
+        const { displayName, email} = userAuth;
+        const createdAt = new Date();
+        // check if any data in place, if isn't will create iot.
+        try {
+            await userRef.set({
+                displayName,
+                email,
+                createdAt,
+                ...additionalData 
+            });
+        } catch (error) {
+            console.log(`error creating user `, error.message)
+        }
+    }
+    return userRef;
+};
+
 firebase.initializeApp(FIREBASE_CONFIG);
 
 export const auth = firebase.auth();
