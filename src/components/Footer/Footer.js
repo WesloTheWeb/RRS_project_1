@@ -7,11 +7,10 @@ const Footer = (props) => {
     return (
         <footer className={footerContainer}>
             <div>
-                <p>Copyright &copy;2021</p>
+                <p>Copyright &copy; 2021 - {new Date().getFullYear()}</p>
             </div>
         </footer>
     );
 };
-
 
 export default Footer;

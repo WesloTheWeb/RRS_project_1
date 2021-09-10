@@ -9,17 +9,33 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(null);
+  let [currentUser, setCurrentUser] = useState({});
 
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
-      setCurrentUser(user);
-      createUserProfileDocument(user)
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      // setCurrentUser(user);
+      // createUserProfileDocument(user)
       // console.log(user);
+
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        
+        userRef.onSnapshot(snapShot => {
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
+          })
+        });
+      }
+
+      setCurrentUser(currentUser = userAuth);
+      console.log(currentUser);
+
     });
- 
+
     return () => {
       unsubscribeFromAuth();
+
     }
   }, []);
 

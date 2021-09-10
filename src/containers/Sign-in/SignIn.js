@@ -15,8 +15,6 @@ const SignIn = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(form.email);
-        console.log(form.password);
         setForm({
             email: '',
             password: '',
