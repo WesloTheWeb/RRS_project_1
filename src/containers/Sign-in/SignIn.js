@@ -3,7 +3,7 @@ import CustomButton from '../../components/CustomButton/CustomButton';
 import ThirdPartyLoginButton from '../../components/ThirdPartyLoginButton/ThirdPartyLoginButton';
 import { googleLogo } from '../../assets';
 import { signInWithGoogle } from '../../firebase/firebase.utils';
-import classes from '../../components/LoginPage/LoginPage.module.scss';
+import classes from '../../pages/LoginPage/LoginPage.module.scss';
 
 const { terminalUIBlock, loginCommon, thirdPartyContainer } = classes;
 

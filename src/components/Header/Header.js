@@ -10,6 +10,8 @@ const Header = ({ currentUser }) => {
 
     const signOut = () => {
         auth.signOut();
+        console.log('log out!')
+        console.log(currentUser)
     };
 
     return (

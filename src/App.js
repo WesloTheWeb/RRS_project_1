@@ -2,14 +2,14 @@ import { React, useState, useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import './App.scss';
-import HomePage from './components/HomePage/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import ShopPage from './containers/ShopPage/ShopPage';
-import LoginPage from './components/LoginPage/LoginPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  let [currentUser, setCurrentUser] = useState({});
+  let [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -24,7 +24,8 @@ function App() {
         });
       }
 
-      setCurrentUser({ userAuth });
+      setCurrentUser(null);
+      // setCurrentUser({ userAuth });
     });
 
     return () => {

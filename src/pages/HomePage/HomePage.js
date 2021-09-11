@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuItem from '../MenuItem/MenuItem';
+import MenuItem from '../../components/MenuItem/MenuItem';
 import classes from './HomePage.module.scss';
 
 const { homepage, directoryMenu } = classes;
