@@ -2,11 +2,13 @@ import { React, useState } from 'react';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import FormInput from '../../components/FormInput/FormInput';
-import classes from './SignUp.module.scss';
+// import classes from './SignUp.module.scss';
+// const { signUpSection, signUpContainer } = classes;
+import classes from '../../pages/LoginPage/LoginPage.module.scss';
 
-const { signUpSection, signUpContainer } = classes;
+const { terminalUIBlock, loginCommon } = classes;
 
-const SignUp = ({ }) => {
+const SignUp = ({props}) => {
 
     const [userInformation, setUserInformation] = useState({
         displayName: '',
@@ -18,7 +20,7 @@ const SignUp = ({ }) => {
     const handleSubmit = async event => {
         event.preventDefault();
         // Manually create our auth from the app.js file:
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
             console.log(`password don't match`);
             return;
         }
@@ -48,10 +50,10 @@ const SignUp = ({ }) => {
     const { displayName, email, password, confirmPassword } = userInformation;
 
     return (
-        <section className={signUpSection}>
+        <section className={terminalUIBlock}>
             <h2>I do not have an account.</h2>
             <span>Sign up with your email and password.</span>
-            <form className={signUpContainer} onSubmit={handleSubmit}>
+            <form className={loginCommon} onSubmit={handleSubmit}>
                 <FormInput
                     type="text"
                     name="displayName"
