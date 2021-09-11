@@ -39,9 +39,10 @@ const SignUp = ({ }) => {
         }
     };
 
-    const handleChange = event => {
-        const { name, value } = event.target;
-        setUserInformation({ [name]: value });
+    const handleChange = (e) => {
+        setUserInformation({ ...userInformation, [e.target.name]: e.target.value })
+        // const { name, value } = event.target;
+        // setUserInformation({ [name]: value });
     }
 
     const { displayName, email, password, confirmPassword } = userInformation;
