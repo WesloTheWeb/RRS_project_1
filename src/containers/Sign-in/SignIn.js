@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import ThirdPartyLoginButton from '../../components/ThirdPartyLoginButton/ThirdPartyLoginButton';
 import { googleLogo } from '../../assets';
-import { signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 import classes from '../../pages/LoginPage/LoginPage.module.scss';
 
 const { terminalUIBlock, loginCommon, thirdPartyContainer } = classes;
@@ -13,13 +13,21 @@ const SignIn = (props) => {
         password: ''
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setForm({
-            email: '',
-            password: '',
-        });
-    }
+        // Destructuring is key here to pass the data along from our state.
+        const {email, password, message} = form;
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            setForm({
+                email: '',
+                password: '',
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -37,7 +45,7 @@ const SignIn = (props) => {
                 <CustomButton>Sign in</CustomButton>
                 <div className={thirdPartyContainer}>
                     <p>OR</p>
-                    <ThirdPartyLoginButton title="Google" image={googleLogo} onClick={signInWithGoogle}></ThirdPartyLoginButton>
+                    <ThirdPartyLoginButton type="button" title="Google" image={googleLogo} onClick={signInWithGoogle}></ThirdPartyLoginButton>
                 </div>
 
             </form>
