@@ -23,6 +23,10 @@
 .mascotImg {
     width: 15%;
     position: absolute;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 769px) {
