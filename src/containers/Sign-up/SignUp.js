@@ -48,7 +48,7 @@ const SignUp = ({ props }) => {
     return (
         <section className={terminalUIBlock}>
             <h2>I do not have an account.</h2>
-            <span>Sign up with your email and password.</span>
+            <span>Sign up today with your email and password. Members get the freshest deals and latest fashion!</span>
             <form className={loginCommon} onSubmit={handleSubmit}>
                 <FormInput
                     type="text"
