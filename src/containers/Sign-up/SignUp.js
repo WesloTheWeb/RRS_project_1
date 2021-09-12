@@ -2,13 +2,11 @@ import { React, useState } from 'react';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import FormInput from '../../components/FormInput/FormInput';
-// import classes from './SignUp.module.scss';
-// const { signUpSection, signUpContainer } = classes;
 import classes from '../../pages/LoginPage/LoginPage.module.scss';
 
 const { terminalUIBlock, loginCommon } = classes;
 
-const SignUp = ({props}) => {
+const SignUp = ({ props }) => {
 
     const [userInformation, setUserInformation] = useState({
         displayName: '',
@@ -43,8 +41,6 @@ const SignUp = ({props}) => {
 
     const handleChange = (e) => {
         setUserInformation({ ...userInformation, [e.target.name]: e.target.value })
-        // const { name, value } = event.target;
-        // setUserInformation({ [name]: value });
     }
 
     const { displayName, email, password, confirmPassword } = userInformation;
