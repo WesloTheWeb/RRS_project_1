@@ -16,7 +16,7 @@ const SignIn = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // Destructuring is key here to pass the data along from our state.
-        const {email, password, message} = form;
+        const { email, password } = form;
 
         try {
             await auth.signInWithEmailAndPassword(email, password);

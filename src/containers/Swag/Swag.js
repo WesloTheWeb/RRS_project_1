@@ -1,6 +1,5 @@
 import { React, useState } from 'react';
 import { mascot } from '../../assets';
-
 import classes from './Swag.module.scss';
 
 const { bubbleBox, bubbleTriangle, mascotImg } = classes;

@@ -3,7 +3,7 @@ import classes from './TwitterFeed.module.scss';
 
 const { tweet } = classes;
 
-const TwitterFeed = ({ }) => {
+const TwitterFeed = ({props}) => {
     return (
         <section >
             <a href="https://twitter.com/intent/tweet?button_hashtag=ShellaFresh&ref_src=twsrc%5Etfw"
