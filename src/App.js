@@ -1,5 +1,7 @@
-import { React, useState, useEffect } from 'react';
+import { React, useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { setCurrentUser } from './counterSlice';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import './App.scss';
 import HomePage from './pages/HomePage/HomePage';
@@ -9,7 +11,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  let [currentUser, setCurrentUser] = useState(null);
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
