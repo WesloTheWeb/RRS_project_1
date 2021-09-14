@@ -1,7 +1,8 @@
 import { React, useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentUser } from './counterSlice';
+// import { setCurrentUser } from './counterSlice';
+import { setCurrentUser } from './features/currentUser/currentUserSlice';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import './App.scss';
 import HomePage from './pages/HomePage/HomePage';
@@ -11,7 +12,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const count = useSelector((state) => state.counter.value)
+  const user = useSelector((state) => state.user.currentUser)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -20,14 +21,14 @@ function App() {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapShot => {
-          setCurrentUser({
+          dispatch({
             id: snapShot.id,
             ...snapShot.data()
           })
         });
       }
 
-      setCurrentUser(null);
+      dispatch(null);
       // setCurrentUser({ userAuth });
     });
 
@@ -35,11 +36,11 @@ function App() {
       unsubscribeFromAuth();
     }
   }, []);
-  console.log(currentUser);
+  // console.log(currentUser);
 
   return (
     <>
-      <Header currentUser={currentUser} />
+      <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/shop' component={ShopPage} />
