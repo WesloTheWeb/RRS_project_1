@@ -27,7 +27,7 @@ const Header = ({ currentUser }) => {
                         <li><NavLink exact to="/" activeClassName="activeNavLink">Home</NavLink></li>
                         <li><NavLink exact to="/shop" activeClassName="activeNavLink">Shop</NavLink></li>
                         {
-                            currentUser ? <li onClick={signOut}><NavLink to="/login">Log Out</NavLink></li> : 
+                            currentUser ? <li onClick={signOut}><NavLink to="/">Log Out</NavLink></li> : 
                             <li><NavLink to="/login" activeClassName="activeNavLink">Log in</NavLink></li>
                         }
                     </ul>

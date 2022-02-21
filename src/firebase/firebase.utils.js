@@ -2,9 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-const FIREBASE_KEY = `AIzaSyDNxcDBsqvf-EwWMHC6rMhuv0Ndg73dRyI`;
 const FIREBASE_CONFIG = {
-    apiKey: FIREBASE_KEY,
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
     authDomain: "shella-fresh-db.firebaseapp.com",
     projectId: "shella-fresh-db",
     storageBucket: "shella-fresh-db.appspot.com",
